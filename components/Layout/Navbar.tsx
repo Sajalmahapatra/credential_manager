@@ -1,4 +1,6 @@
 "use client";
+import ProfileDrawer from "@/components/Layout/ProfileDrawer";
+
 export default function Navbar() {
   return (
     <div className="bg-white shadow p-4 flex justify-between items-center">
@@ -9,6 +11,7 @@ export default function Navbar() {
           className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
+      <ProfileDrawer />
     </div>
   );
 }

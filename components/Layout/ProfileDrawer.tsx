@@ -1,12 +1,16 @@
 "use client";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function ProfileDrawer() {
   const [isOpen, setIsOpen] = useState(false);
+  const drawerRef = useRef<HTMLElement | any>(null);
+
+  useOutsideClick(drawerRef, () => setIsOpen(false), isOpen);
 
   return (
-    <div className="relative">
+    <div className="relative" ref={drawerRef}>
       <button
         className="flex items-center p-2 hover:bg-gray-200 rounded-full"
         onClick={() => setIsOpen(!isOpen)}
