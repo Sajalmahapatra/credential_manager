@@ -24,3 +24,100 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes lockAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+
+.animate-shackle {
+  animation: lockAnimation 2s infinite alternate ease-in-out;
+  transform-origin: center bottom;
+  /* or 'top center' depending on your SVG */
+}
+
+@keyframes starFadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes starFade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.star-1 {
+  animation: starFade 2s infinite alternate ease-in-out;
+  animation-delay: 0.7s;
+}
+
+.star-2 {
+  animation: starFade 2s infinite alternate ease-in-out;
+  animation-delay: 0.5s;
+}
+
+.star-3 {
+  animation: starFade 2s infinite alternate ease-in-out;
+  animation-delay: 0s;
+}
+
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.animate-path {
+  stroke: #fff;
+  stroke-width: 10;
+  fill: #74d4f5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+  animation: drawPath 5s infinite ease-in-out;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
