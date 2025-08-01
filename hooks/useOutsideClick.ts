@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { RefObject, useEffect } from "react";
 
-export function useOutsideClick<T extends HTMLElement>(ref: React.RefObject<T>, handler: (event: MouseEvent) => void, enabled: boolean = true) {
+export function useOutsideClick<T extends HTMLElement>(ref: RefObject<T | null>, handler: (event: MouseEvent) => void, enabled: boolean = true) {
   useEffect(() => {
     if (!enabled) return;
 

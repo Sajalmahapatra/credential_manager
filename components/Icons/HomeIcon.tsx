@@ -1,5 +1,5 @@
 import * as React from "react";
-const HomeIcon = (props: any) => (
+const HomeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>
     <path
       strokeLinecap="round"

@@ -5,8 +5,8 @@ import React from "react";
 //   title: "Settings Page",
 // };
 
-const page = () => {
+const Page = () => {
   const pageName = usePathname().split("/").pop();
   return <div>page- {pageName}</div>;
 };
-export default page;
+export default Page;

@@ -1,5 +1,5 @@
 import * as React from "react";
-const SadFaceIcon = (props: any) => (
+const SadFaceIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg className="w-20 h-20 text-gray-400 mb-6" fill="none" stroke="currentColor" strokeWidth="{1.5}" viewBox="0 0 48 48" {...props}>
     <circle cx={24} cy={24} r={22} stroke="currentColor" strokeWidth={3} fill="none" />
     <circle cx={17} cy={20} r={2.5} fill="currentColor" />

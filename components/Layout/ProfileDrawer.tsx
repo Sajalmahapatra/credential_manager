@@ -1,11 +1,13 @@
 "use client";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef } from "react";
 
 export default function ProfileDrawer() {
   const [isOpen, setIsOpen] = useState(false);
-  const drawerRef = useRef<HTMLElement | any>(null);
+  // const drawerRef = useRef<HTMLDivElement | null>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   useOutsideClick(drawerRef, () => setIsOpen(false), isOpen);
 
@@ -18,7 +20,8 @@ export default function ProfileDrawer() {
       </button>
       <div className={`absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4 ${isOpen ? "block" : "hidden"}`}>
         <div className="flex items-center space-x-2">
-          <img src="/profile.jpg" alt="Profile" className="w-10 h-10 rounded-full" />
+          {/* <img src="/profile.jpg" alt="Profile" className="w-10 h-10 rounded-full" /> */}
+          <Image src="/profile.jpg" alt="Profile" width={40} height={40} className="rounded-full" />
           <div>
             <p className="font-semibold">Admin User</p>
             <p className="text-sm text-gray-600">admin@example.com</p>

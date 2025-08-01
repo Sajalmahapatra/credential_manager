@@ -4,9 +4,9 @@ import React from "react";
 // export const metadata = {
 //   title: "Profile Page",
 // };
-const page = () => {
+const Page = () => {
     const pageName = usePathname().split("/").pop();
   return <div>page- {pageName}</div>;
 };
 
-export default page;
+export default Page;
